@@ -1,0 +1,253 @@
+/* author Jin 
+    2015/10/5
+*/
+
+/* init */
+html, header, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, button, input, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+li {
+	list-style-type:none;
+}
+*{
+	transition-duration: 0.2s;                  
+}
+body {
+	font: 18px "Microsoft Yahei", "华文黑体", "Helvetica Neue", "Arial";
+}
+
+::selection {
+    background:#fff;
+    color:#FFF;
+}
+::-moz-selection {
+    background:#fff;
+    color:#FFF;
+}
+::-webkit-selection {
+    background:#fff;
+    color:#FFF;
+}
+a {
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	color: #67002c;
+	text-decoration: underline;
+}
+
+/* end init */
+/* Footer */
+
+.footer {
+    height: 285px;
+    margin: 0 auto auto;
+    overflow: hidden;
+    padding-left: 80px;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+    width: 950px;
+    background-color: #54c3f1;
+    left: 0px;
+    top: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px
+}
+#bottom_ul ul {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 128px;
+    margin-left: 50px;
+}
+.top_nav a{
+    color: red;
+}
+.top_nav{
+    color: red;
+    font-weight: bolder;
+    height: 30px;
+    line-height: 35px;
+}
+
+.footer ul li{
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+.footer ul li a{
+    color: #fff;
+    font-size: 15px;
+}
+.footer ul li a :hover{
+    color: #adb2b6;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+
+}
+#border{
+    background-color: #B3BBE4;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+}
+#contect li{
+    font-size: 15px;
+}
+
+/* end footer */
+/* ***************** */
+em {
+    font-style: italic;
+}
+.hide {
+    display: none;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.align-left {
+    text-align: left !important;
+}
+.align-center {
+    text-align: center !important;
+}
+.align-right {
+    text-align: right !important;
+}
+/* ****************** */
+/* header */
+#wrapper-header{
+    background: #E3ECF0;
+    border-bottom: 4px solid #54c3f1;
+    height: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#header{
+	max-width: 975px;
+	margin: 0 auto;
+	height: 75px;
+	position: relative;
+	z-index: 1000;                  /*高度比nav_open的要低*/
+}
+#header .logo {
+    display: block;
+    left: -75px;
+    position: absolute;
+    top: 0px;
+}
+#header .controls {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: auto;
+    right:-180px;
+}
+#header .links {
+    display: block;
+    float: right;
+    font-size: 11px;
+    margin: 6px -10px 0 0;
+}
+#header .links > li {
+    border-left: 0px solid #ecdcba;
+    display: block;
+    float: left;
+    padding: 0 7px;
+}
+#header .links > li > a {
+    color: #00ad5f;
+    display: block;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 3px;
+    font-size: 15px;
+    font-weight: 160;
+}
+#header .links > li > a:hover {
+    color: #955542;
+}
+#s{
+    border-radius: 10px;
+}
+#button{
+    border-radius: 10px;
+    cursor:pointer;
+    
+}
+#button img{
+    width:18px;
+    height: 18px;
+}
+
+/* ************* */
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:0;border-radius:5px;color:#fff;margin-top: 50px;background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;text-align: center;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;border-radius:5px;color:#fff;margin-top: 50px;background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;text-align: center;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;width:5px;height:10px;font-size: 8px;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+pre + h2{
+    margin-top: 80px;
+}
+.bjqs img{
+    cursor:pointer;
+}
+ul.bjqs-controls.v-centered li a{
+    font-size: 40px;
+    font-weight: 500;
+    width:40px;
+    display:block;
+    text-decoration: none;
+    transition:width 2s;
+    -moz-transition:width 2s; /* Firefox 4 */
+    -webkit-transition:width 2s; /* Safari and Chrome */
+    -o-transition:width 2s; /* Opera */
+}
+ol.bjqs-markers li a{
+    padding:5px 10px;
+    background:#000;
+    color:#fff;
+    margin:5px;
+    text-decoration: none;
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+    background: #999;
+}
+p.bjqs-caption{
+    background: rgba(255,255,255,0.5);
+}

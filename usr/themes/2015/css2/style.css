@@ -1,0 +1,292 @@
+
+@font-face {
+    font-family: "JosefinSansRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("font/josefinsans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("font/josefinsans-regular-webfont.woff") format("woff"), url("font/josefinsans-regular-webfont.ttf") format("truetype"), url("font/josefinsans-regular-webfont.svg#JosefinSansRegular") format("svg");
+}
+body, h1, h2, img, ul, li, p, ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #575757;
+    text-decoration: none;
+}
+a:hover {
+    color: #0af;
+    text-decoration: none;
+}
+i {
+    margin-right: 4px;
+}
+.post-content ul, .post-contentol {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+ul, li {
+    list-style: outside none none;
+}
+.post-content ul {
+    padding-left: 36px;
+}
+.post-content ul li {
+    list-style: outside none square;
+}
+p, .post-content li {
+    line-height: 24px;
+}
+@keyframes fade-in {
+0% {
+    opacity: 0;
+}
+40% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #fff;
+}
+#wrapper {
+    animation: 0.8s ease 0s normal none 1 running fade-in;
+}
+#cont {
+    background: rgba(0, 0, 0, 0) url("images/overlay.png") repeat fixed 0 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.hide {
+    display: none;
+}
+.container, .containers {
+    margin: 0 auto;
+    position: relative;
+}
+.container {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px;
+    margin-top: 78px;
+    width: 960px;
+}
+.containers {
+    width: 1280px;
+}
+ul.menu li {
+    float: left;
+    margin-right: 32px;
+}
+ul.menu li a {
+    color: #fff;
+    display: block;
+    height: 18px;
+    text-shadow: 1px 1px #333;
+}
+.contacticon li {
+    float: right;
+    margin-right: 12px;
+}
+.contacticon li a {
+    color: #fff;
+}
+.inner {
+    background: #D8D8D8;
+    padding: 4px 16px;
+}
+.light {
+    color: #a2a2a2;
+}
+
+.sliders {
+    position: relative;
+}
+.rslides {
+    list-style: outside none none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.rslides li {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.rslides li:first-child {
+    display: block;
+    float: left;
+    position: relative;
+}
+.rslides img {
+    border: 0 none;
+    display: block;
+    float: left;
+    height: auto;
+    width: 100%;
+}
+.rslides_tabs {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+}
+.rslides_tabs li {
+    display: inline-block;
+    vertical-align: middle;
+}
+.rslides_tabs li a {
+    background: rgba(0, 0, 0, 0) url("images/valshow.png") no-repeat scroll center top;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    height: 11px;
+    line-height: 1;
+    margin: 0 2px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 11px;
+}
+.rslides_here {
+    background: rgba(0, 0, 0, 0) url("images/valshow.png") no-repeat scroll center bottom;
+    cursor: default;
+}
+.postlist {
+    border-top: 1px solid #b7b7b7;
+}
+ul.post li {
+    padding: 10px 12px;
+}
+ul.post li:nth-child(2n), #comments ol li:nth-child(2n+1), .weibotemplate ul li:nth-child(2n) {
+    background-color: #eff4f9 !important;
+}
+ul.post li h2, .article h2 {
+    font-family: "JosefinSansRegular","Trebuchet MS","Microsoft JhengHei","Microsoft YaHei",Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    padding-bottom: 4px;
+}
+ul.post li p {
+    margin-bottom: 6px;
+}
+.thumb {
+    float: left;
+    height: 100px;
+    margin-right: 12px;
+    overflow: hidden;
+    width: 140px;
+}
+.thumb img {
+    transform: scale(1, 1);
+    transition: all 0.3s ease 0s;
+}
+.thumb:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s ease 0s;
+}
+.postmeta {
+    clear: both;
+    overflow: hidden;
+}
+.postmeta a {
+    color: #a5a4a4;
+}
+.defaultpost {
+    margin-top: 15px;
+}
+.postauthor, .postinfoviews, .defaulttag {
+    color: #a5a4a4;
+    display: inline-block;
+    margin-right: 10px;
+}
+.postauthor {
+    background: rgba(0, 0, 0, 0) url("images/meta.png") no-repeat scroll -9px -13px;
+    height: 18px;
+    padding-left: 20px;
+}
+.postinfoviews {
+    background: rgba(0, 0, 0, 0) url("images/meta.png") no-repeat scroll -7px -42px;
+    height: 18px;
+    padding-left: 20px;
+}
+.defaulttag {
+    background: rgba(0, 0, 0, 0) url("images/meta.png") no-repeat scroll -9px -99px;
+    height: 18px;
+    padding-left: 20px;
+}
+.defaulttag a {
+    margin-right: 10px;
+}
+.article {
+    padding: 16px 24px 10px;
+}
+.article h2 {
+    padding-bottom: 18px;
+    text-align: center;
+}
+.article img {
+    height: auto;
+    margin: 10px 0;
+    max-width: 940px;
+    width: auto;
+}
+.article .postmeta {
+    border-bottom: 1px dashed #cdcdcd;
+    margin-bottom: 16px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+.article .post-content {
+    padding-bottom: 8px;
+}
+.article .post-content img {
+    height: auto;
+    margin: 10px auto;
+    max-width: 912px;
+}
+.thumb img {
+    height: 200px;
+    width: 200px;
+}
+.linklist {
+    background-color: #e8e8e8;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #b7b7b7;
+    padding: 16px 10px;
+}
+.linklist ul li {
+    float: left;
+    margin-bottom: 6px;
+    text-align: center;
+    width: 188px;
+}
+.linetitle_bottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: "Microsoft YaHei",Helvetica,sans-serif;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}

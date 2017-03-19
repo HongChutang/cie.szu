@@ -1,0 +1,116 @@
+/* ------------------------------------
+ * xblock Theme
+ *
+ * @author	Jin
+ * @link	http://the203x.com
+ * @update	2015-10-15 00:06
+ * --------------------------------- */
+/* ---------------
+ * Gobal settings
+ * --------------- */
+/* ------------------
+ * sidebar
+ * --------------- */
+ #sidebar {
+	margin-top: -10px;
+	float:left;
+	position: relative;
+	width:165px;
+	margin-left:-25px;
+	height: auto;
+}
+.widget {
+	margin:0 0 20px;
+	background:#EEE;
+	padding:12px 15px 15px;
+	opacity:0.8;
+	color:#222;
+	text-shadow:0px 1px 2px #949494;
+}
+ .widget span{
+ 	cursor:pointer;
+ }
+.widget a{
+	color:#2E2C2C;
+}
+.widget p {
+	color:#2E2C2C;
+	font-size: 17px;
+	cursor:pointer;
+}
+.widget a:hover {
+	color:#c00;
+}
+.widget h3 {
+	text-transform: uppercase;
+	font-size: .9em;
+	/*text-align: center;*/
+	margin-bottom:.3em;
+	padding-bottom:.3em;
+	border-bottom:1px solid #CCC;
+	box-shadow:0 1px white;
+}
+.widget ul {
+	margin:0;
+	list-style-type:none;
+}
+.widget ul li {
+	margin:0;
+	padding:0;
+	line-height:1.8em;
+}
+.widget li {
+	position:relative; 
+}
+.widget li ul li{
+	position:relative;
+	margin-left:6px;
+}
+#sidebar .r_comments {
+	font-size:12px;
+}
+#sidebar .r_posts li,
+#sidebar .r_comments li {
+	clear:both;
+	line-height:1.6em;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:5px 0;
+	border-bottom:1px solid #CCC;
+	box-shadow:0 1px white;
+}
+#sidebar .r_comments li ul li{
+	padding:0;
+}
+#sidebar .r_comments li ul li a{
+	color:#564D4D;
+	font-size: 16px;
+}
+#sidebar .r_comments li ul li a:hover{
+	color:#EC6464;
+}
+#sidebar .r_comments h3{
+	font-size:18px;
+}
+#sidebar .tagcloud a {
+	display:inline-block;
+	white-space:nowrap;
+	padding:0px 3px;
+	margin: 2px 0px;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-radius:3px;
+	color:#444;
+	background:#E0E0E0;
+}
+#sidebar .tagcloud a:hover {
+	color:#111;
+	background:#FFF;
+	border:none;
+	border-top:1px solid #CCC;
+	border-left:1px solid #CCC;
+}
+
+
+

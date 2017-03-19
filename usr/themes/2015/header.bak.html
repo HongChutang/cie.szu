@@ -1,0 +1,139 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="<?php $this->options->charset(); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title><?php $this->archiveTitle(array(
+            'category'  =>  _t('%s '),
+            'search'    =>  _t('包含关键字 %s 的文章'),
+            'tag'       =>  _t('标签 %s 下的文章'),
+            'author'    =>  _t('%s 发布的文章')
+        ), '', ' - '); ?><?php $this->options->title(); ?></title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/common.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/banner.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/index.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/detail.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/archive.css'); ?>">
+    <!--[if IE]><link rel="stylesheet" href="<?php $this->options->themeUrl('css/ie.css'); ?>"><![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <?php $this->header(); ?>
+
+</head>
+<body>
+
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com">升级你的浏览器</a>'); ?>.</div>
+<![endif]-->
+
+    <div class="nav">
+        <ul class="nav_left">
+            <li>
+                关于学院
+            </li>
+            <li>
+                人才培养
+            </li>
+            <li>
+                科学研究
+            </li>
+        </ul>
+        <ul class="nav_right">
+            <li>
+                校友之窗
+            </li>
+            <li>
+                内部管理
+            </li>
+            <li>
+                快速通道
+            </li>
+        </ul>
+    </div>
+    <div class="logo">
+        <a class="logo" href="<?php $this->options->siteUrl(); ?>">
+            <img src="<?php $this->options->themeUrl('image/logo.png'); ?>" srcset="<?php $this->options->themeUrl('image/logo@2x.png'); ?> 2x" alt="深圳大学信息工程学院">
+        </a>
+    </div>
+    <div class="nav_open_ab">
+        <div class="nav_open">
+            <div class="nav_open_1">
+                <ul>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/archives/about.html"><li>学院简介</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/81/"><li>组织架构</li></a>
+                    <a href="#"><li>学院沿革</li></a>
+                    <a href="#"><li>学院简讯</li></a>
+                    <a href="#"><li>学院视频</li></a>
+                    <a href="#"><li>竞赛获奖</li></a>
+                </ul>
+            </div>
+            <div class="nav_open_2">
+                <ul>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsgz-jysj/"><li>招生就业</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/bkjw/"><li>本科教学</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/yjsjx/"><li>研究生教学</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/yjsjx-bsyjs/"><li>博士生教学</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/crjy/"><li>成人教育</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/45/"><li>工程硕士</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsgz/"><li>学生工作</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsgz-xqlz/"><li>校园生活</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsgz-jzd/"><li>奖助贷</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/yxxs/"><li>优秀学生</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/tmssq/"><li>推免生申请</li></a>
+                </ul>
+            </div>
+            <div class="nav_open_3">
+                <ul>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xksz/"><li>学科设置</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/dwjs/"><li>教师专区</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/110/"><li>重点实验室</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/142/"><li>科研基地</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/142/"><li>科研统计</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/58/"><li>科研项目</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/61/"><li>专利成果</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/59/"><li>出版作品</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/60/"><li>论文发表</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/qzsq/"><li>求职申请</li></a>
+                </ul>
+            </div>
+            <div class="nav_open_cie_logo">
+                <img src="<?php $this->options->themeUrl('image/cie_logo.png'); ?>" srcset="<?php $this->options->themeUrl('image/cie_logo@2x.png'); ?> 2x">
+            </div>
+            <div class="nav_open_4">
+                <ul>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xyh/"><li>毕业照片</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xyh/"><li>校友去向</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xyh/"><li>活动集锦</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xyh/"><li>校友讲座</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xyh/"><li>校友捐赠</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xyh/"><li>校友招聘</li></a>
+                </ul>
+            </div>
+            <div class="nav_open_5">
+                <ul>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsgz-cywjxz/"><li>文件下载</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/bszn/"><li>办事指南</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/79/"><li>党务工作</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xygh/"><li>工会办公</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/bkjw-bjc/"><li>会议室申请</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/88/"><li>导生工作</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsgz/"><li>学生工作</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/xsst/"><li>学生社团</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/80/"><li>规章制度</li></a>
+                    <a href="<?php $this->options->siteUrl(); ?>index.php/category/qanda/"><li>Q&amp;A</li></a>
+                </ul>
+            </div>
+            <div class="nav_open_6">
+                <ul>
+                    <a href="<?php $this->options->siteUrl('admin'); ?>" target="_blank"><li>后台登陆</li></a>
+                </ul>
+            </div>
+        </div>    
+    </div>
+</header>
+

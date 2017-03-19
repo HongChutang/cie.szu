@@ -1,0 +1,57 @@
+@charset "utf-8"; 
+/*
+* 深圳大学-信息工程学院;
+* ShenZhen University - College of Information Engineering;
+* Author:Jason;
+* Edited:2014.11.10;
+* Copyright:SZU CIE;
+*/
+.dir_tree {
+	width: 980px;
+	margin: 0 auto;
+	height: 60px;
+	background: #FFF;
+	box-shadow: rgba(0,0,0,0.2) 0 0 10px;
+	margin-top: 30px;
+	border-radius: 15px;
+	padding-left: 20px;
+	color: #950040;
+	font: 16px "Microsoft Yahei", "华文黑体", "Helvetica Neue", "Arial";
+	line-height: 60px;
+}
+.detail {
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 30px 40px 30px;
+	background: #FFF;
+	box-shadow: rgba(0,0,0,0.2) 0 0 10px;
+	border-radius: 15px;
+	margin-top: 20px;
+	line-height: 40px;
+}
+.detail h2 {
+	color: #212121;
+}
+.detail h5 {
+	color: #999;
+	font-weight: normal;
+}
+.detail p { 
+	text-indent: 2em;
+	color: #222222;
+}
+.detail img {
+	text-align: center;
+}
+.last_page {
+	float: left;
+	text-align: left;
+	font: 16px "Microsoft Yahei", "华文黑体", "Helvetica Neue", "Arial";
+	color: #950040;
+}
+.next_page {
+	float: right;
+	text-align: right;
+	font: 16px "Microsoft Yahei", "华文黑体", "Helvetica Neue", "Arial";
+	color: #950040;
+}

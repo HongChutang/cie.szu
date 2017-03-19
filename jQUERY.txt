@@ -1,0 +1,247 @@
+jQuery笔记
+
+您也许已经注意到在我们的实例中的所有 jQuery 函数位于一个 document ready 函数中：
+
+$(document).ready(function(){
+
+--- jQuery functions go here ----
+
+});
+
+这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码。
+
+如果在文档没有完全加载之前就运行函数，操作可能失败。下面是两个具体的例子：
+
+    试图隐藏一个不存在的元素
+    获得未完全加载的图像的大小
+
+
+
+jQuery 名称冲突
+
+jQuery 使用 $ 符号作为 jQuery 的简介方式。
+
+某些其他 JavaScript 库中的函数（比如 Prototype）同样使用 $ 符号。
+
+jQuery 使用名为 noConflict() 的方法来解决该问题。
+
+var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号。
+
+由于 jQuery 是为处理 HTML 事件而特别设计的，那么当您遵循以下原则时，您的代码会更恰当且更易维护：
+
+    把所有 jQuery 代码置于事件处理函数中
+    把所有事件处理函数置于文档就绪事件处理器中
+    把 jQuery 代码置于单独的 .js 文件中
+    如果存在名称冲突，则重命名 jQuery 库
+
+可以用 animate() 方法来操作所有 CSS 属性吗？
+
+是的，几乎可以！不过，需要记住一件重要的事情：当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，等等。
+
+同时，色彩动画并不包含在核心 jQuery 库中。
+
+如果需要生成颜色动画，您需要从 jQuery.com 下载 Color Animations 插件。
+
+
+
+
+19.$("div#intro .head") 选择器选取哪些元素？
+
+您的回答：id="intro" 或 class="head" 的所有 div 元素
+
+正确答案：id="intro" 的首个 div 元素中的 class="head" 的所有元素
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("/example/jquery/demo_test_post.asp",
+    {
+      name:"Donald Duck",
+      city:"Duckburg"
+    },
+    function(data,status){//data带有请求页面的一些信息
+      alert("数据：" + data + "\n状态：" + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>向页面发送 HTTP POST 请求，并获得返回的结果</button>
+
+</body>
+</html>
+
+
+
+text()、html() 以及 val() 的回调函数
+
+上面的三个 jQuery 方法：text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#test1").text(function(i,origText){
+      return "Old text: " + origText + " New text: Hello world! (index: " + i + ")"; 
+    });
+  });
+
+  $("#btn2").click(function(){
+    $("#test2").html(function(i,origText){
+      return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")"; 
+    });
+  });
+
+});
+</script>
+</head>
+
+<body>
+<p id="test1">这是<b>粗体</b>文本。</p>
+<p id="test2">这是另一段<b>粗体</b>文本。</p>
+<button id="btn1">显示旧/新文本</button>
+<button id="btn2">显示旧/新 HTML</button>
+</body>
+</html>
+
+
+
+jQuery attr() 方法也用于设置/改变属性值。
+attr() 方法也允许您同时设置多个属性。
+
+下面的例子演示如何同时设置 href 和 title 属性：
+});
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr({
+      "href" : "http://www.w3school.com.cn/jquery/",
+      "title" : "W3School jQuery 教程"
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+<p><a href="http://www.w3school.com.cn" id="w3s">W3School.com.cn</a></p>
+<button>改变 href 和 title 值</button>
+<p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值和已经设置的 title 值。</p>
+</body>
+</html>
+
+attr() 的回调函数
+
+jQuery 方法 attr()，也提供回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。
+
+下面的例子演示带有回调函数的 attr() 方法：
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", function(i,origValue){
+      return origValue + "/jquery"; 
+    });
+  }); 
+});
+</script>
+</head>
+
+<body>
+<p><a href="http://www.w3school.com.cn" id="w3s">w3school.com.cn</a></p>
+<button>改变 href 值</button>
+<p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值。</p>
+</body>
+</html>
+
+
+隐藏，如果您希望在彼此之后执行不同的动画，那么我们要利用队列功能：
+
+$("button").click(function(){
+  var div=$("div");
+  div.animate({height:'300px',opacity:'0.4'},"slow");
+  div.animate({width:'300px',opacity:'0.8'},"slow");
+  div.animate({height:'100px',opacity:'0.4'},"slow");
+  div.animate({width:'100px',opacity:'0.8'},"slow");
+});
+
+
+
+
+
+
+jQuery stop() 方法
+
+jQuery stop() 方法用于停止动画或效果，在它们完成之前。
+
+stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。
+语法
+
+$(selector).stop(stopAll,goToEnd);
+
+可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+
+可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+
+因此，默认地，stop() 会清除在被选元素上指定的当前动画。
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#start").click(function(){
+    $("div").animate({left:'100px'},5000);
+    $("div").animate({fontSize:'3em'},5000);
+  });
+  
+  $("#stop").click(function(){
+    $("div").stop();
+  });
+
+  $("#stop2").click(function(){
+    $("div").stop(true);
+  });
+
+  $("#stop3").click(function(){
+    $("div").stop(true,true);
+  });
+  
+});
+</script> 
+</head>
+<body>
+
+<button id="start">开始</button>
+<button id="stop">停止</button>
+<button id="stop2">停止所有</button>
+<button id="stop3">停止但要完成</button>
+<p><b>"开始"</b> 按钮会启动动画。</p>
+<p><b>"停止"</b> 按钮会停止当前活动的动画，但允许已排队的动画向前执行。</p>
+<p><b>"停止所有"</b> 按钮停止当前活动的动画，并清空动画队列；因此元素上的所有动画都会停止。</p>
+<p><b>"停止但要完成"</b> 会立即完成当前活动的动画，然后停下来。</p> 
+
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+
+</body>
+</html>

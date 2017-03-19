@@ -1,0 +1,19 @@
+@charset "utf-8"; 
+/*
+* 深圳大学-信息工程学院;
+* ShenZhen University - College of Information Engineering;
+* Author:Jason;
+* Edited:2014.11.10;
+* Copyright:SZU CIE;
+*/
+.article {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: -30px;
+	height: 500px;
+	background: #FFF;
+	border-radius: 15px;
+	box-shadow: rgba(0,0,0,0.2) 0 0 10px;
+	position: relative;
+	z-index: 1001;
+}

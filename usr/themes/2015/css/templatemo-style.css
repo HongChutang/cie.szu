@@ -1,0 +1,179 @@
+/*
+Volton Template
+
+*/
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  vertical-align: baseline;
+  font-family:"Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent
+}
+
+.sidebar-menu {
+  float: left;
+  width: 160px;
+  height:500px;
+ border-radius: 5px;
+  background-color: #fff;
+  color: white;
+  z-index:1300;
+}
+@media screen and (max-width: 1290px) {
+  .sidebar-menu {
+    overflow-y: scroll;
+    width: 30%;
+  }
+}
+
+.top-section {
+  width:50px;
+  margin-left:11px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+ margin-left: 11px;
+}
+.profile-image img {
+  width: 100%;
+}
+
+h3.profile-title {
+  margin-bottom: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+.main-navigation {
+  margin: 30px 0;
+}
+.main-navigation li {
+  display: block;
+}
+.main-navigation li a {
+  padding: 5px 4px;
+  display: block;
+  color: #BB3636;
+  margin: 20px;
+  font-size: 20px ;
+  font-family: "微软雅黑";
+}
+.main-navigation li a i {
+  margin-right: 15px;
+  font-size: 24px;
+}
+.main-navigation li a:hover {
+  background: #950040;
+  color:#fff;
+}
+.main-navigation li a.active {
+  background: #495461;
+}
+.main-navigation li a.active:hover {
+  background: #495461;
+}
+
+.main-navigation li ul {
+    position: absolute;
+    z-index: 1500;
+    background-color:#ECE3C7;
+    width: 200px;
+	 height:2700px;
+	left:130px;
+	top:0;
+  box-shadow: rgba(0,0,0,0.2) 0 5px 10px;
+	display:none;
+}
+
+.main-navigation li:hover ul {
+	display:block;                      /*当main-navigation li被选中时候其中的hover ul板块就显示出来，代替了javascript的功能*/
+}
+
+.main-navigation li ul li a:hover {
+	background: #495461;
+}
+
+.main-navigation li ul li a .label {
+	float:right;
+}
+
+.social-icons {
+  display: block;
+  padding: 30px 40px;
+}
+.social-icons li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.social-icons a {
+  font-size: 18px;
+  color: white;
+}
+.social-icons a:hover {
+  color: #282e35;
+}
+
+.responsive-header {
+  background: #5f6d7e;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .responsive-header .main-navigation {
+    margin-top: 10px;
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .responsive-header p {
+    color: white;
+  }
+}
+@media screen and (max-width: 992px) {
+  .responsive-header .profile-image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+  .responsive-header .profile-content {
+    text-align: left;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .top-section {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main-navigation a {
+    padding: 10px;
+  }
+  .main-navigation a.active {
+    background: #006699 !important;
+  }
+  .main-navigation a:hover {
+    background: #006699 !important;
+  }
+}
+
+.toggle-menu {
+  width: 100%;
+  display: block;
+  padding: 20px;
+  margin-top: 30px;
+  background: #6cc0f7;
+  color: white;
+  font-size: 18px;
+}
+.toggle-menu:hover {
+  color: white;
+}
